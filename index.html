@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -106,9 +106,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.02);
         }
-        /* Style untuk Foto Hasil Pancingan */
         .log-img {
             max-width: 100%;
             max-height: 250px;
@@ -117,6 +115,50 @@
             margin-top: 5px;
             border: 1px solid #ddd;
         }
+        
+        /* STYLE BARU: Untuk Afiliasi Belanja & Kontak */
+        .shop-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .shop-item:last-child {
+            border-bottom: none;
+        }
+        .btn-shop {
+            background-color: #ee4d2d; /* Warna Oranye Shopee */
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .btn-shop:hover {
+            opacity: 0.9;
+        }
+        .footer-contact {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+        .btn-social {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 8px 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .wa { background-color: #25d366; }
+        .ig { background-color: #e1306c; }
     </style>
 </head>
 <body>
@@ -132,6 +174,37 @@
 
     <div class="container">
         
+        <!-- Bagian Toko Alat Pancing (Sumber Uang/Afiliasi) -->
+        <div class="card">
+            <h2>🛒 Rekomendasi Alat Pancing Jitu (Cuan)</h2>
+            <p style="font-size: 0.9rem; color: #666; margin-top: -5px;">Rekomendasi alat pancing andalan Hidayat. Klik tombol untuk beli!</p>
+            
+            <div class="shop-item">
+                <div>
+                    <strong>🎣 Joran Carbon Maguro 180cm</strong><br>
+                    <span style="color: #666; font-size: 0.85rem;">Sangat kuat untuk tarikan kakap dan patin.</span>
+                </div>
+                <!-- Ganti tanda # di bawah ini dengan link produk Shopee Affiliate kamu nanti -->
+                <a href="#" target="_blank" class="btn-shop">Beli di Shopee</a>
+            </div>
+
+            <div class="shop-item">
+                <div>
+                    <strong>⚙️ Reel Ryobi Ultra Power 3000</strong><br>
+                    <span style="color: #666; font-size: 0.85rem;">Putaran halus, drag kuat, anti karat air laut.</span>
+                </div>
+                <a href="#" target="_blank" class="btn-shop">Beli di Shopee</a>
+            </div>
+
+            <div class="shop-item">
+                <div>
+                    <strong>🧶 Senar PE Piranha X8 0.23mm</strong><br>
+                    <span style="color: #666; font-size: 0.85rem;">Tipis tapi super kuat, anti keriting.</span>
+                </div>
+                <a href="#" target="_blank" class="btn-shop">Beli di Shopee</a>
+            </div>
+        </div>
+        
         <!-- Bagian Spot Terfavorit -->
         <div class="card">
             <h2>📍 Spot Mancing Favorit Hidayat</h2>
@@ -142,17 +215,7 @@
             </ul>
         </div>
 
-        <!-- Bagian Umpan Jitu -->
-        <div class="card">
-            <h2>🐛 Resep Umpan Jitu</h2>
-            <ul>
-                <li><span class="badge">Umpan Hidup</span> Udang hidup kecil (sangat ampuh untuk ikan laut/muara).</li>
-                <li><span class="badge">Racikan</span> Campuran pelet, telur asin, dan sedikit essen pandan (untuk ikan Mas).</li>
-                <li><span class="badge">Lure</span> Minnow tiruan warna cerah untuk teknik casting ikan Gabus.</li>
-            </ul>
-        </div>
-
-        <!-- Form Catatan Mancing dengan Upload Foto -->
+        <!-- Form Catatan Mancing -->
         <div class="card">
             <h2>📝 Catat Hasil Pancing Hari Ini</h2>
             <div class="form-group">
@@ -175,9 +238,17 @@
             </div>
         </div>
 
+        <!-- Bagian Kontak Endorse Bisnis -->
+        <div class="footer-contact">
+            <h3>🤝 Tertarik Kerjasama / Endorse Produk Pancing?</h3>
+            <p>Hubungi Hidayat melalui kontak di bawah ini:</p>
+            <!-- Ganti # dengan nomor WA kamu (contoh: https://wa.me) dan link IG kamu -->
+            <a href="#" target="_blank" class="btn-social wa">💬 Hubungi via WhatsApp</a>
+            <a href="#" target="_blank" class="btn-social ig">📸 Ikuti di Instagram</a>
+        </div>
+
     </div>
 
-    <!-- JavaScript untuk memproses input teks dan gambar -->
     <script>
         function tambahCatatan() {
             var lokasi = document.getElementById('lokasi').value;
@@ -192,7 +263,6 @@
 
             var waktu = new Date().toLocaleDateString('id-ID');
             
-            // Fungsi untuk membuat struktur HTML catatan
             function cetakCatatan(imgSrc) {
                 if (daftar.innerHTML.includes("Belum ada catatan")) {
                     daftar.innerHTML = "";
@@ -211,24 +281,13 @@
                 
                 daftar.innerHTML = kontenBaru + daftar.innerHTML;
 
-                // Reset form setelah disimpan
                 document.getElementById('lokasi').value = "";
                 document.getElementById('ikan').value = "";
                 fotoInput.value = "";
             }
 
-            // Cek apakah user mengupload foto
             if (fotoInput.files && fotoInput.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
-                    cetakCatatan(e.target.result); // Cetak dengan foto
-                }
-                reader.readAsDataURL(fotoInput.files[0]);
-            } else {
-                cetakCatatan(null); // Cetak tanpa foto jika tidak ada file yang dipilih
-            }
-        }
-    </script>
+                    cetakCatatan(e.target.result);
 
-</body>
-</html>
