@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+  
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -115,8 +116,6 @@
             margin-top: 5px;
             border: 1px solid #ddd;
         }
-        
-        /* STYLE BARU: Untuk Afiliasi Belanja & Kontak */
         .shop-item {
             display: flex;
             justify-content: space-between;
@@ -128,7 +127,7 @@
             border-bottom: none;
         }
         .btn-shop {
-            background-color: #ee4d2d; /* Warna Oranye Shopee */
+            background-color: #ee4d2d;
             color: white;
             text-decoration: none;
             padding: 6px 12px;
@@ -174,7 +173,7 @@
 
     <div class="container">
         
-        <!-- Bagian Toko Alat Pancing (Sumber Uang/Afiliasi) -->
+        <!-- Bagian Toko Alat Pancing (Afiliasi) -->
         <div class="card">
             <h2>🛒 Rekomendasi Alat Pancing Jitu (Cuan)</h2>
             <p style="font-size: 0.9rem; color: #666; margin-top: -5px;">Rekomendasi alat pancing andalan Hidayat. Klik tombol untuk beli!</p>
@@ -184,8 +183,7 @@
                     <strong>🎣 Joran Carbon Maguro 180cm</strong><br>
                     <span style="color: #666; font-size: 0.85rem;">Sangat kuat untuk tarikan kakap dan patin.</span>
                 </div>
-                <!-- Ganti tanda # di bawah ini dengan link produk Shopee Affiliate kamu nanti -->
-                <a href="#" target="_blank" class="btn-shop">Beli di Shopee</a>
+                <a href="https://shopee.co.id" target="_blank" class="btn-shop">Beli di Shopee</a>
             </div>
 
             <div class="shop-item">
@@ -193,7 +191,7 @@
                     <strong>⚙️ Reel Ryobi Ultra Power 3000</strong><br>
                     <span style="color: #666; font-size: 0.85rem;">Putaran halus, drag kuat, anti karat air laut.</span>
                 </div>
-                <a href="#" target="_blank" class="btn-shop">Beli di Shopee</a>
+                <a href="https://shopee.co.id" target="_blank" class="btn-shop">Beli di Shopee</a>
             </div>
 
             <div class="shop-item">
@@ -201,7 +199,7 @@
                     <strong>🧶 Senar PE Piranha X8 0.23mm</strong><br>
                     <span style="color: #666; font-size: 0.85rem;">Tipis tapi super kuat, anti keriting.</span>
                 </div>
-                <a href="#" target="_blank" class="btn-shop">Beli di Shopee</a>
+                <a href="https://shopee.co.id" target="_blank" class="btn-shop">Beli di Shopee</a>
             </div>
         </div>
         
@@ -238,13 +236,12 @@
             </div>
         </div>
 
-        <!-- Bagian Kontak Endorse Bisnis -->
+        <!-- Bagian Kontak Kontak WA Aktif Ke Nomor Dayat -->
         <div class="footer-contact">
             <h3>🤝 Tertarik Kerjasama / Endorse Produk Pancing?</h3>
             <p>Hubungi Hidayat melalui kontak di bawah ini:</p>
-            <!-- Ganti # dengan nomor WA kamu (contoh: https://wa.me) dan link IG kamu -->
-            <a href="#" target="_blank" class="btn-social wa">💬 Hubungi via WhatsApp</a>
-            <a href="#" target="_blank" class="btn-social ig">📸 Ikuti di Instagram</a>
+            <a href="https://wa.me" target="_blank" class="btn-social wa">💬 Hubungi via WhatsApp</a>
+            <a href="https://instagram.com" target="_blank" class="btn-social ig">📸 Ikuti di Instagram</a>
         </div>
 
     </div>
@@ -286,8 +283,17 @@
                 fotoInput.value = "";
             }
 
-            if (fotoInput.files && fotoInput.files[0]) {
+            if (fotoInput.files && fotoInput.files) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     cetakCatatan(e.target.result);
+                }
+                reader.readAsDataURL(fotoInput.files);
+            } else {
+                cetakCatatan(null);
+            }
+        }
+    </script>
 
+</body>
+</html>
