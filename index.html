@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jurnal Memancing Hidayat</title>
-
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,24 +12,20 @@
             margin: 0;
             padding: 0;
         }
-
         header {
             background-color: #1e3a8a;
             color: white;
             text-align: center;
             padding: 30px 10px;
         }
-
         header h1 {
             margin: 0;
             font-size: 2.5rem;
         }
-
         header p {
-            margin: 5px 0 0;
+            margin: 5px 0 0 0;
             opacity: 0.9;
         }
-
         .profile-bar {
             background-color: #152e72;
             color: #a5f3fc;
@@ -40,46 +35,47 @@
             font-weight: bold;
             letter-spacing: 0.5px;
         }
-
         .container {
             max-width: 900px;
             margin: 20px auto;
             padding: 0 20px;
         }
-
         .card {
             background: white;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-
         .card h2 {
             color: #1e3a8a;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 10px;
             margin-top: 0;
         }
-
         ul {
             padding-left: 20px;
         }
-
         li {
             margin-bottom: 8px;
         }
-
+        .badge {
+            background-color: #3b82f6;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-right: 5px;
+        }
         .form-group {
             margin-bottom: 15px;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-
         .form-group input {
             width: 100%;
             padding: 8px;
@@ -87,7 +83,6 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
-
         .btn-submit {
             background-color: #10b981;
             color: white;
@@ -99,11 +94,9 @@
             width: 100%;
             font-size: 1rem;
         }
-
         .btn-submit:hover {
             background-color: #059669;
         }
-
         .log-item {
             background: #f8fafc;
             border-left: 4px solid #10b981;
@@ -114,7 +107,6 @@
             flex-direction: column;
             gap: 10px;
         }
-
         .log-img {
             max-width: 100%;
             max-height: 250px;
@@ -123,7 +115,6 @@
             margin-top: 5px;
             border: 1px solid #ddd;
         }
-
         .shop-item {
             display: flex;
             justify-content: space-between;
@@ -131,11 +122,9 @@
             padding: 12px 0;
             border-bottom: 1px dashed #e2e8f0;
         }
-
         .shop-item:last-child {
             border-bottom: none;
         }
-
         .btn-shop {
             background-color: #ee4d2d;
             color: white;
@@ -145,11 +134,9 @@
             font-size: 0.9rem;
             font-weight: bold;
         }
-
         .btn-shop:hover {
             opacity: 0.9;
         }
-
         .footer-contact {
             text-align: center;
             margin-top: 30px;
@@ -158,7 +145,6 @@
             color: white;
             border-radius: 8px 8px 0 0;
         }
-
         .btn-social {
             display: inline-block;
             margin: 5px 10px;
@@ -169,18 +155,12 @@
             font-weight: bold;
             font-size: 0.9rem;
         }
-
-        .wa {
-            background-color: #25d366;
-        }
-
-        .ig {
-            background-color: #e1306c;
-        }
+        .wa { background-color: #25d366; }
+        .ig { background-color: #e1306c; }
     </style>
 </head>
-
 <body>
+
     <div class="profile-bar">
         Angler Profile: Hidayat Supriyadi 🎣
     </div>
@@ -190,90 +170,66 @@
         <p>Catatan Jurnal, Spot, dan Umpan Jitu Andalan</p>
     </header>
 
-    <main class="container">
-        <section class="card">
+    <div class="container">
+        <div class="card">
             <h2>🛒 Toko Alat Pancing Hidayat</h2>
-            <p style="font-size: 0.9rem; color: #666; margin-top: -5px;">
-                Klik tombol di bawah ini untuk melihat produk di toko Shopee saya!
-            </p>
+            <p style="font-size: 0.9rem; color: #666; margin-top: -5px;">Klik tombol di bawah ini untuk melihat koleksi produk di toko Shopee resmi saya!</p>
 
             <div class="shop-item">
                 <div>
                     <strong>🛍️ Kunjungi Toko Shopee Utama</strong><br>
-                    <span style="color: #666; font-size: 0.85rem;">
-                        Tempat resmi penjualan alat pancing dan racikan umpan.
-                    </span>
+                    <span style="color: #666; font-size: 0.85rem;">Tempat resmi penjualan alat pancing dan racikan umpan jitu.</span>
                 </div>
-                <a href="https://shopee.co.id/hidayatsupriyadi236"
-                   target="_blank" rel="noopener noreferrer" class="btn-shop">
-                    Masuk Toko
-                </a>
+                <a href="https://shopee.co.id/hidayatsupriyadi236" target="_blank" rel="noopener noreferrer" class="btn-shop">Masuk Toko</a>
             </div>
 
             <div class="shop-item">
                 <div>
                     <strong>🎣 Rekomendasi Joran &amp; Reel</strong><br>
-                    <span style="color: #666; font-size: 0.85rem;">
-                        Lihat koleksi alat pancing yang saya rekomendasikan.
-                    </span>
+                    <span style="color: #666; font-size: 0.85rem;">Lihat daftar alat pancing andalan yang saya rekomendasikan di toko.</span>
                 </div>
-                <a href="https://shopee.co.id/hidayatsupriyadi236"
-                   target="_blank" rel="noopener noreferrer" class="btn-shop">
-                    Masuk Toko
-                </a>
+                <a href="https://shopee.co.id/hidayatsupriyadi236" target="_blank" rel="noopener noreferrer" class="btn-shop">Masuk Toko</a>
             </div>
-        </section>
+        </div>
 
-        <section class="card">
+        <div class="card">
             <h2>📍 Spot Mancing Favorit Hidayat</h2>
             <ul>
-                <li><strong>Dermaga Pantai Selatan</strong> — Banyak ikan Kakap Merah, waktu terbaik sore hari.</li>
-                <li><strong>Pemancingan Jaya Abadi</strong> — Tempat nyaman untuk mencari Gurame dan Mas besar.</li>
-                <li><strong>Sungai Arus Tenang</strong> — Target utama ikan Gabus dan Betok.</li>
+                <li><strong>Dermaga Pantai Selatan</strong> - Banyak ikan Kakap Merah, waktu terbaik sore hari.</li>
+                <li><strong>Pemancingan Jaya Abadi</strong> - Tempat nyaman buat nyari Gurame dan Mas besar.</li>
+                <li><strong>Sungai Arus Tenang</strong> - Target utama ikan Gabus dan Betok.</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="card">
+        <div class="card">
             <h2>📝 Catat Hasil Pancing Hari Ini</h2>
-
             <div class="form-group">
                 <label for="lokasi">Lokasi Mancing:</label>
                 <input type="text" id="lokasi" placeholder="Contoh: Waduk Cirata">
             </div>
-
             <div class="form-group">
                 <label for="ikan">Ikan yang Didapat:</label>
-                <input type="text" id="ikan" placeholder="Contoh: Nila 3 ekor">
+                <input type="text" id="ikan" placeholder="Contoh: Nila 3 Ekor">
             </div>
-
             <div class="form-group">
                 <label for="foto">Masukkan Foto Tangkapan (Opsional):</label>
                 <input type="file" id="foto" accept="image/*">
             </div>
-
-            <button class="btn-submit" type="button" onclick="tambahCatatan()">
-                Simpan Jurnal Hidayat
-            </button>
+            <button class="btn-submit" type="button" onclick="tambahCatatan()">Simpan Jurnal Hidayat</button>
 
             <h3>📋 Riwayat Tangkapan:</h3>
             <div id="daftarCatatan">
-                <p class="kosong">Belum ada catatan hari ini.</p>
+                <p class="kosong" style="color: #888; font-style: italic;">Belum ada catatan hari ini.</p>
             </div>
-        </section>
+        </div>
 
-        <footer class="footer-contact">
-            <h3>🤝 Tertarik Kerja Sama / Endorse Produk Pancing?</h3>
+        <div class="footer-contact">
+            <h3>🤝 Tertarik Kerjasama / Endorse Produk Pancing?</h3>
             <p>Hubungi Hidayat melalui kontak di bawah ini:</p>
-            <a href="https://wa.me/6285925581378"
-               target="_blank" rel="noopener noreferrer" class="btn-social wa">
-                💬 Hubungi via WhatsApp
-            </a>
-            <a href="https://www.instagram.com/supriyadi0095/"
-               target="_blank" rel="noopener noreferrer" class="btn-social ig">
-                📸 Ikuti di Instagram
-            </a>
-        </footer>
-    </main>
+            <a href="https://wa.me/6285925581378" target="_blank" rel="noopener noreferrer" class="btn-social wa">💬 Hubungi via WhatsApp</a>
+            <a href="https://www.instagram.com/supriyadi0095/" target="_blank" rel="noopener noreferrer" class="btn-social ig">📸 Ikuti di Instagram</a>
+        </div>
+    </div>
 
     <script>
         function tambahCatatan() {
@@ -281,7 +237,6 @@
             const ikanInput = document.getElementById("ikan");
             const fotoInput = document.getElementById("foto");
             const daftar = document.getElementById("daftarCatatan");
-
             const lokasi = lokasiInput.value.trim();
             const ikan = ikanInput.value.trim();
 
@@ -290,44 +245,60 @@
                 return;
             }
 
-            const waktu = new Date().toLocaleDateString("id-ID");
-            const item = document.createElement("div");
-            item.className = "log-item";
+            function tampilkanCatatan(fotoUrl) {
+                if (daftar.querySelector(".kosong")) {
+                    daftar.innerHTML = "";
+                }
 
-            const teks = document.createElement("div");
-            const tanggal = document.createElement("strong");
-            tanggal.textContent = "🗓️ " + waktu;
-            teks.appendChild(tanggal);
-            teks.append(" — Hidayat mancing di ");
+                const item = document.createElement("div");
+                item.className = "log-item";
 
-            const lokasiTeks = document.createElement("u");
-            lokasiTeks.textContent = lokasi;
-            teks.appendChild(lokasiTeks);
-            teks.append(" dapat ikan ");
+                const teks = document.createElement("div");
+                const tanggal = document.createElement("strong");
+                tanggal.textContent = "🗓️ " + new Date().toLocaleDateString("id-ID");
+                teks.appendChild(tanggal);
+                teks.append(" — Hidayat mancing di ");
 
-            const ikanTeks = document.createElement("strong");
-            ikanTeks.textContent = ikan;
-            teks.appendChild(ikanTeks);
-            item.appendChild(teks);
+                const lokasiTeks = document.createElement("u");
+                lokasiTeks.textContent = lokasi;
+                teks.appendChild(lokasiTeks);
+                teks.append(" dapat ikan ");
 
-            if (fotoInput.files && fotoInput.files[0]) {
-                const foto = document.createElement("img");
-                foto.src = URL.createObjectURL(fotoInput.files[0]);
-                foto.alt = "Foto tangkapan";
-                foto.className = "log-img";
-                item.appendChild(foto);
+                const ikanTeks = document.createElement("strong");
+                ikanTeks.textContent = ikan;
+                teks.appendChild(ikanTeks);
+                item.appendChild(teks);
+
+                if (fotoUrl) {
+                    const foto = document.createElement("img");
+                    foto.src = fotoUrl;
+                    foto.alt = "Foto tangkapan";
+                    foto.className = "log-img";
+                    item.appendChild(foto);
+                }
+
+                daftar.prepend(item);
+                lokasiInput.value = "";
+                ikanInput.value = "";
+                fotoInput.value = "";
             }
 
-            if (daftar.querySelector(".kosong")) {
-                daftar.innerHTML = "";
-            }
+            const fileFoto = fotoInput.files && fotoInput.files[0];
 
-            daftar.prepend(item);
-            lokasiInput.value = "";
-            ikanInput.value = "";
-            fotoInput.value = "";
+            if (fileFoto) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    tampilkanCatatan(event.target.result);
+                };
+                reader.onerror = function() {
+                    alert("Foto tidak dapat dibaca. Coba pilih foto lain.");
+                };
+                reader.readAsDataURL(fileFoto);
+            } else {
+                tampilkanCatatan(null);
+            }
         }
     </script>
+
 </body>
 </html>
- 
