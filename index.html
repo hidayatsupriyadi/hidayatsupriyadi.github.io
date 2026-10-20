@@ -1,5 +1,5 @@
- <!DOCTYPE html>
-<html lang="id" translate="no" class="notranslate">
+<!DOCTYPE html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +7,24 @@
 
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a; /* Biru Tua Modern / Dark Mode */
-            color: #f8fafc;
             margin: 0;
             padding: 0;
+            color: #f8fafc;
+            background-color: #0f172a;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         }
 
         header {
-            background: linear-gradient(135deg, #1e3a8a, #0f766e); /* Gradasi Warna */
+            padding: 40px 10px;
             color: white;
             text-align: center;
-            padding: 40px 10px;
+            background: linear-gradient(135deg, #1e3a8a, #0f766e);
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         header p {
@@ -33,14 +33,14 @@
         }
 
         .profile-bar {
-            background-color: #0f172a;
+            padding: 10px;
             color: #38bdf8;
-            text-align: center;
-            padding: 10px 10px;
+            background-color: #0f172a;
+            border-bottom: 1px solid #334155;
             font-size: 0.95rem;
             font-weight: bold;
             letter-spacing: 0.5px;
-            border-bottom: 1px solid #334155;
+            text-align: center;
         }
 
         .container {
@@ -50,19 +50,19 @@
         }
 
         .card {
-            background: #1e293b; /* Warna Kotak Gelap Elegan */
-            border-radius: 12px;
-            padding: 25px;
             margin-bottom: 25px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            background: #1e293b;
             border: 1px solid #334155;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
 
         .card h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
             color: #38bdf8;
             border-bottom: 2px solid #334155;
-            padding-bottom: 10px;
-            margin-top: 0;
         }
 
         ul {
@@ -81,18 +81,18 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            font-weight: bold;
             color: #cbd5e1;
+            font-weight: bold;
         }
 
         .form-group input {
+            box-sizing: border-box;
             width: 100%;
             padding: 10px;
-            border: 1px solid #475569;
-            background-color: #0f172a;
             color: white;
+            background-color: #0f172a;
+            border: 1px solid #475569;
             border-radius: 6px;
-            box-sizing: border-box;
         }
 
         .form-group input:focus {
@@ -101,16 +101,16 @@
         }
 
         .btn-submit {
-            background: linear-gradient(to right, #10b981, #059669);
-            color: white;
-            border: none;
+            width: 100%;
             padding: 12px 15px;
+            color: white;
+            background: linear-gradient(to right, #10b981, #059669);
+            border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-weight: bold;
-            width: 100%;
             font-size: 1rem;
-            transition: all 0.2s;
+            font-weight: bold;
+            transition: 0.2s;
         }
 
         .btn-submit:hover {
@@ -125,32 +125,29 @@
             margin-top: 15px;
         }
 
-        @media (min-width: 600px) {
-            .log-grid { grid-template-columns: 1fr 1fr; }
-        }
-
         .log-item {
-            background: #0f172a;
-            border: 1px solid #334155;
-            padding: 15px;
-            border-radius: 8px;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            padding: 15px;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
         }
 
         .log-img {
             width: 100%;
             height: 180px;
-            border-radius: 6px;
             object-fit: cover;
             border: 1px solid #334155;
+            border-radius: 6px;
         }
 
         .shop-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 16px;
             padding: 15px 0;
             border-bottom: 1px dashed #334155;
         }
@@ -160,14 +157,14 @@
         }
 
         .btn-shop {
-            background-color: #ee4d2d;
-            color: white;
-            text-decoration: none;
             padding: 8px 16px;
+            color: white;
+            background-color: #ee4d2d;
             border-radius: 6px;
+            box-shadow: 0 4px 6px -1px rgba(238, 77, 45, 0.4);
             font-size: 0.9rem;
             font-weight: bold;
-            box-shadow: 0 4px 6px -1px rgba(238, 77, 45, 0.4);
+            text-decoration: none;
             transition: 0.2s;
         }
 
@@ -176,13 +173,13 @@
         }
 
         .footer-contact {
-            text-align: center;
             margin-top: 40px;
             padding: 30px 20px;
-            background: #1e293b;
             color: white;
-            border-radius: 12px 12px 0 0;
+            background: #1e293b;
             border-top: 2px solid #38bdf8;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
         }
 
         .btn-social {
@@ -190,15 +187,42 @@
             margin: 5px 10px;
             padding: 10px 20px;
             color: white;
-            text-decoration: none;
             border-radius: 6px;
-            font-weight: bold;
             font-size: 0.95rem;
+            font-weight: bold;
+            text-decoration: none;
         }
 
-        .wa { background-color: #25d366; }
-        .ig { background-color: #e1306c; }
-        .kosong { color: #94a3b8; text-align: center; padding: 20px; }
+        .wa {
+            background-color: #25d366;
+        }
+
+        .ig {
+            background-color: #e1306c;
+        }
+
+        .kosong {
+            padding: 20px;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        @media (min-width: 600px) {
+            .log-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .shop-item {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -213,7 +237,6 @@
     </header>
 
     <main class="container">
-        <!-- Toko Section -->
         <section class="card">
             <h2>🛒 Toko Alat Pancing Hidayat</h2>
             <p style="font-size: 0.9rem; color: #94a3b8; margin-top: -5px;">
@@ -227,7 +250,12 @@
                         Tempat resmi penjualan alat pancing dan racikan umpan.
                     </span>
                 </div>
-                <a href="https://shopee.co.id" target="_blank" rel="noopener noreferrer" class="btn-shop">
+                <a
+                    href="https://shopee.co.id/hidayatsupriyadi236"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-shop"
+                >
                     Masuk Toko
                 </a>
             </div>
@@ -239,39 +267,62 @@
                         Lihat koleksi alat pancing yang saya rekomendasikan.
                     </span>
                 </div>
-                <a href="https://shopee.co.id" target="_blank" rel="noopener noreferrer" class="btn-shop">
+                <a
+                    href="https://shopee.co.id/hidayatsupriyadi236"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-shop"
+                >
                     Masuk Toko
                 </a>
             </div>
         </section>
 
-        <!-- Spot Section -->
         <section class="card">
             <h2>📍 Spot Mancing Favorit Hidayat</h2>
             <ul>
-                <li><strong>Dermaga Pantai Selatan</strong> — Banyak ikan Kakap Merah, waktu terbaik sore hari.</li>
-                <li><strong>Pemancingan Jaya Abadi</strong> — Tempat nyaman untuk mencari Gurame dan Mas besar.</li>
-                <li><strong>Sungai Arus Tenang</strong> — Target utama ikan Gabus dan Betok.</li>
+                <li>
+                    <strong>Dermaga Pantai Selatan</strong> — Banyak ikan Kakap Merah,
+                    waktu terbaik sore hari.
+                </li>
+                <li>
+                    <strong>Pemancingan Jaya Abadi</strong> — Tempat nyaman untuk
+                    mencari Gurame dan Mas besar.
+                </li>
+                <li>
+                    <strong>Sungai Arus Tenang</strong> — Target utama ikan Gabus dan Betok.
+                </li>
             </ul>
         </section>
 
-        <!-- Form Section -->
         <section class="card">
             <h2>📝 Catat Hasil Pancing Hari Ini</h2>
 
             <div class="form-group">
                 <label for="lokasi">Lokasi Mancing:</label>
-                <input type="text" id="lokasi" placeholder="Contoh: Waduk Cirata">
+                <input
+                    type="text"
+                    id="lokasi"
+                    placeholder="Contoh: Waduk Cirata"
+                >
             </div>
 
             <div class="form-group">
                 <label for="ikan">Ikan yang Didapat:</label>
-                <input type="text" id="ikan" placeholder="Contoh: Nila 3 ekor">
+                <input
+                    type="text"
+                    id="ikan"
+                    placeholder="Contoh: Nila 3 ekor"
+                >
             </div>
 
             <div class="form-group">
                 <label for="foto">Masukkan Foto Tangkapan (Opsional):</label>
-                <input type="text" id="foto" placeholder="Masukkan URL Foto atau biarkan kosong">
+                <input
+                    type="url"
+                    id="foto"
+                    placeholder="Masukkan URL foto atau biarkan kosong"
+                >
             </div>
 
             <button class="btn-submit" type="button" onclick="tambahCatatan()">
@@ -279,25 +330,34 @@
             </button>
 
             <h3>📋 Riwayat Tangkapan:</h3>
-            <div id="daftarCatatan" class="log-grid">
-                <!-- Data akan dimuat dari JavaScript -->
-            </div>
+            <div id="daftarCatatan" class="log-grid"></div>
         </section>
 
-        <!-- Footer -->
         <footer class="footer-contact">
             <h3>🤝 Tertarik Kerja Sama / Endorse Produk Pancing?</h3>
             <p>Hubungi Hidayat melalui kontak di bawah ini:</p>
-            <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="btn-social wa">
+            <a
+                href="https://wa.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-social wa"
+            >
                 💬 Hubungi via WhatsApp
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social ig">
+            <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-social ig"
+            >
                 📸 Ikuti di Instagram
             </a>
         </footer>
     </main>
 
     <script>
+        const KUNCI_JURNAL = "jurnalMancing";
+
         document.addEventListener("DOMContentLoaded", muatCatatan);
 
         function tambahCatatan() {
@@ -307,25 +367,81 @@
 
             const lokasi = lokasiInput.value.trim();
             const ikan = ikanInput.value.trim();
-            const fotoUrl = fotoInput.value.trim();
+            const foto = fotoInput.value.trim();
 
             if (!lokasi || !ikan) {
                 alert("Mohon isi lokasi dan nama ikannya dulu ya!");
                 return;
             }
 
-            const waktu = new Date().toLocaleDateString("id-ID");
-            
-            const dataBaru = {
-                waktu: waktu,
-                lokasi: lokasi,
-                ikan: ikan,
-                foto: fotoUrl
-            };
+            const catatan = ambilCatatan();
+            catatan.unshift({
+                waktu: new Date().toLocaleDateString("id-ID"),
+                lokasi,
+                ikan,
+                foto
+            });
 
-            let catatanLama = JSON.parse(localStorage.getItem("jurnalMancing")) || [];
-            catatanLama.unshift(dataBaru);
-            localStorage.setItem("jurnalMancing", JSON.stringify(catamanLama));
+            localStorage.setItem(KUNCI_JURNAL, JSON.stringify(catatan));
 
+            lokasiInput.value = "";
+            ikanInput.value = "";
+            fotoInput.value = "";
 
- 
+            muatCatatan();
+        }
+
+        function ambilCatatan() {
+            try {
+                return JSON.parse(localStorage.getItem(KUNCI_JURNAL)) || [];
+            } catch {
+                return [];
+            }
+        }
+
+        function muatCatatan() {
+            const daftar = document.getElementById("daftarCatatan");
+            const catatan = ambilCatatan();
+
+            daftar.replaceChildren();
+
+            if (catatan.length === 0) {
+                const pesan = document.createElement("p");
+                pesan.className = "kosong";
+                pesan.textContent = "Belum ada catatan tangkapan.";
+                daftar.appendChild(pesan);
+                return;
+            }
+
+            catatan.forEach((item) => {
+                const kartu = document.createElement("article");
+                kartu.className = "log-item";
+
+                if (item.foto) {
+                    const gambar = document.createElement("img");
+                    gambar.className = "log-img";
+                    gambar.src = item.foto;
+                    gambar.alt = `Tangkapan ikan di ${item.lokasi}`;
+                    gambar.loading = "lazy";
+                    kartu.appendChild(gambar);
+                }
+
+                const detail = document.createElement("div");
+
+                const tanggal = document.createElement("small");
+                tanggal.textContent = item.waktu;
+
+                const lokasi = document.createElement("p");
+                lokasi.textContent = `📍 ${item.lokasi}`;
+
+                const ikan = document.createElement("p");
+                ikan.textContent = `🐟 ${item.ikan}`;
+
+                detail.append(tanggal, lokasi, ikan);
+                kartu.appendChild(detail);
+                daftar.appendChild(kartu);
+            });
+        }
+    </script>
+</body>
+</html>
